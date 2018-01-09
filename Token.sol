@@ -90,7 +90,7 @@ contract Token {
     minAmount(msg.value)
     public
     {
-        uint256 coinIncrease = msg.value / 10000000000000000 * 30;
+        uint256 coinIncrease = msg.value / 1000000000000000000 * 3000;
         uint256 _coinBonus = coinIncrease / 10 * 3;
         currentCoins += coinIncrease;
         currentCoinsWithBonuses += coinIncrease + _coinBonus;
