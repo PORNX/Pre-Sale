@@ -9,10 +9,10 @@ contract Token {
     }
     string public constant name = "PORNX";
     string public constant symbol = "PORNX";
-    // 22.01.2018 08:00:00 GMT+8
-    uint public constant start_timestamp = 1516579200;
-    // 04.02.2018 23:59:59 GMT +8
-    uint public constant end_timestamp = 1517673599;
+    // 29.01.2018 08:00:00 GMT+8
+    uint public constant start_timestamp = 1517184000;
+    // 11.02.2018 23:59:59 GMT +8
+    uint public constant end_timestamp = 1518307200;
     States public state;        
     uint256 public currentCoins;
     uint256 public currentCoinsWithBonuses;
@@ -90,7 +90,7 @@ contract Token {
     minAmount(msg.value)
     public
     {
-        uint256 coinIncrease = msg.value / 10000000000000000 * 15;
+        uint256 coinIncrease = msg.value / 10000000000000000 * 30;
         uint256 _coinBonus = coinIncrease / 10 * 3;
         currentCoins += coinIncrease;
         currentCoinsWithBonuses += coinIncrease + _coinBonus;
