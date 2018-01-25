@@ -27,7 +27,7 @@ library SafeMath {
     return c;
   }
 }
-contract Pornx {
+contract Presale {
     using SafeMath for uint256;
     enum States {
         Initial, // deployment time
@@ -37,10 +37,10 @@ contract Pornx {
     }
     string public constant name = "PORNX";
     string public constant symbol = "PORNX";
-    // 01/29/2018 10:00:00 GMT+8
-    uint public constant start_timestamp = 1517191200;
-    // 02/11/2018 23:59:59 GMT+8
-    uint public constant end_timestamp = 1518364799;
+    // 02/11/2018 10:00:00 GMT+8
+    uint public constant start_timestamp = 1518314400;
+    // 02/25/2018 23:59:59 GMT+8
+    uint public constant end_timestamp = 1519574399;
     States public state;        
     uint256 public currentEth;
     uint256 public currentCoins;
@@ -50,7 +50,7 @@ contract Pornx {
     address public initialHolder;
     mapping (address => uint256) public balances;
     mapping (address => uint256) public balances_eth;
-    function Pornx() 
+    function Presale() 
     public 
     {
         currentEth = 0;
@@ -125,7 +125,7 @@ contract Pornx {
     public
     {
         uint256 _coinIncrease = msg.value * 3000 / 1000000000000000000 ;
-        uint256 _coinBonus = _coinIncrease * 3 / 10;
+        uint256 _coinBonus = _coinIncrease * 30 / 100;
         require (maxCoinsWithBonuses - currentCoinsWithBonuses >= _coinIncrease + _coinBonus);
         currentEth += msg.value;
         currentCoins += _coinIncrease;
