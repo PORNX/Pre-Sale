@@ -5,7 +5,7 @@ library SafeMath {
       return 0;
     }
     uint256 c = a * b;
-    assert(c / a == b);
+    assert(c / a == b);1
     return c;
   }
 
